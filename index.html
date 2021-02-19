@@ -1,107 +1,118 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
+	<title>Peter Baumert</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css" />
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
 
-        body {
-            display: flex;
-            flex-direction: column;
-            margin: 0px;
-            background-color: black;
-        }
+		body {
+			display: flex;
+			flex-direction: column;
+			margin: 0px;
+			background-color: black;
+		}
 
-        .content {
-            flex: 1 0 auto;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-        }
+		.content {
+			flex: 1 0 auto;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+		}
 
-        .fig-ansi {
-            font-size: 20pt;
-            font-family: "Courier New", Monospace;
-            white-space: pre;
-            letter-spacing: -1px;
-            color: crimson;
-        }
+		table {
+			margin: 0 auto;
+			width: 70% !important;
+		}
 
-        #footer {
-            flex-shrink: 0;
-            display: flex;
-            justify-content: space-between;
-            background-color: rgb(44, 44, 44);
-            padding-top: 3px;
-            padding-bottom: 3px;
-            color: white;
-            font-size: 1.5em;
-        }
+		.fig-ansi {
+			font-size: 20pt;
+			font-family: "Courier New", Monospace;
+			white-space: pre;
+			letter-spacing: -1px;
+			color: crimson;
+		}
 
-        #footer #hostname,
-        #session,
-        #windows,
-        #speed,
-        #date,
-        #time {
-            text-align: center;
-            padding-left: 10px;
-            padding-right: 10px;
-            color: lightgray;
-        }
+		#footer {
+			flex-shrink: 0;
+			display: flex;
+			justify-content: space-between;
+			background-color: rgb(44, 44, 44);
+			padding-top: 3px;
+			padding-bottom: 3px;
+			color: white;
+			font-size: 1.5em;
+		}
 
-        #hostname {
-            color: darkmagenta;
-            font-weight: bold;
-        }
+		#footer #hostname,
+		#session,
+		#windows,
+		#speed,
+		#date,
+		#time {
+			text-align: center;
+			padding-left: 10px;
+			padding-right: 10px;
+			color: lightgray;
+		}
 
-        #session {
-            color: darkgreen;
-            font-weight: bold;
-        }
+		#hostname {
+			color: darkmagenta;
+			font-weight: bold;
+		}
 
-        #speed {
-            color: orange;
-        }
+		#session {
+			color: darkgreen;
+			font-weight: bold;
+		}
 
-        #date {
-            color: orange;
-            padding-right: 0px;
-        }
+		#speed {
+			color: orange;
+		}
 
-        #time {
-            color: darkgreen;
-            padding-left: 5px;
-            font-weight: bold;
-        }
+		#date {
+			color: orange;
+			padding-right: 0px;
+		}
 
-        #windows {
-            flex: 1 0 auto;
-            display: flex;
-            justify-content: center;
-        }
+		#time {
+			color: darkgreen;
+			padding-left: 5px;
+			font-weight: bold;
+		}
 
-        #windows div {
-            padding-left: 2px;
-            padding-right: 2px;
-        }
-        
-        #windows .active::before {
-            content: "(";
-            color: red;
-        }
-        #windows .active::after {
-            content: ")";
-            color: red;
-        }
-        #windows .active {
-            color: darkgreen;
-            font-weight: 600;
-        }
+		#windows {
+			flex: 1 0 auto;
+			display: flex;
+			justify-content: center;
+		}
 
-    </style>
+		#windows div {
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+
+		#windows .active::before {
+			content: "(";
+			color: red;
+		}
+
+		#windows .active::after {
+			content: ")";
+			color: red;
+		}
+
+		#windows .active {
+			color: darkgreen;
+			font-weight: 600;
+		}
+	</style>
 </head>
 
 <body>
@@ -128,7 +139,7 @@
         <div id="session">local</div>
         <div class="cb">]</div>
         <div class="ob">[</div>
-        <div id="windows"><div class="active">0:Home</div><div style="cursor: pointer;" onclick="window.location='https://peterbaumert.github.io/iobroker/';">1:ioBroker</div></div>
+        <div id="windows"><div class="active">0:Home</div><div style="cursor: pointer;" onclick="window.location='/iobroker/';">1:ioBroker</div></div>
         <div class="cb">]</div>
         <div class="ob">[</div>
         <div id="speed"></div>
@@ -138,7 +149,7 @@
         <div id="time">19:45:12</div>
         <div class="cb">]</div>
     </div>
-    <script>
+    <script type="text/javascript">
         function currentTime() {
             var date = new Date(); /* creating object of Date class */
             var hour = updateTime(date.getHours());
