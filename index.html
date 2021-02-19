@@ -29,35 +29,42 @@
         #footer {
             flex-shrink: 0;
             display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
             justify-content: space-between;
-            align-items: stretch;
-            align-content: stretch;
-            width: 100%;
+            background-color: rgb(44, 44, 44);
         }
 
-        #footer div {
+        #footer #hostname,#session,#windows,#speed,#date,#time {
             text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         #hostname {
-            flex: 1 0 auto;
-            margin: 3px;
+            color:darkmagenta;
+            font-weight: bold;
         }
+
         #session {
-            flex: 1 0 auto;
-            margin: 3px;
+            color:darkgreen;
+            font-weight: bold;
         }
-        #windows {
-            flex: 4 0 auto;
-            margin: 3px;
-        }
+
         #speed {
-            flex: 1 0 auto;
-            margin: 3px;
+            color:orange;
+            font-weight: bold;
         }
+
         #date {
+            color:orange;
+            padding-right: 0px;
+        }
+
+        #time {
+            color:darkgreen;
+            padding-left: 5px;
+        }
+
+        #windows {
             flex: 1 0 auto;
             margin: 3px;
         }
@@ -81,11 +88,11 @@
         </pre>
     </div>
     <div id="footer">
-        [<div id="hostname">peterbaumert.github.io</div>]
-        [<div id="session">local</div>]
-        [<div id="windows">MUH KUH</div>]
-        [<div id="speed"></div>]
-        [<div id="date">01.01.2020 19:45:12</div>]
+        <div class="ob">[</div><div id="hostname">peterbaumert.github.io</div><div class="cb">]</div>
+        <div class="ob">[</div><div id="session">local</div><div class="cb">]</div>
+        <div class="ob">[</div><div id="windows">MUH KUH</div><div class="cb">]</div>
+        <div class="ob">[</div><div id="speed"></div><div class="cb">]</div>
+        <div class="ob">[</div><div id="date">01.01.2020</div><div id="time">19:45:12</div><div class="cb">]</div>
     </div>
 </body>
 
