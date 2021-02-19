@@ -80,31 +80,6 @@
             flex: 1 0 auto;
         }
     </style>
-    <script>
-        function currentTime() {
-            var date = new Date(); /* creating object of Date class */
-            var hour = updateTime(date.getHours());
-            var min = updateTime(date.getMinutes());
-            var sec = updateTime(date.getSeconds());
-            var day = updateTime(date.getDay());
-            var month = updateTime(date.getMonth());
-            var year = date.getFullYear();
-            document.getElementById("time").innerText = hour + ":" + min + ":" + sec; /* adding time to the div */
-            document.getElementById("date").innerText = day + "." + month + "." + year; /* adding date to the div */
-            var t = setTimeout(function () { currentTime() }, 1000); /* setting timer */
-        }
-
-        function updateTime(k) {
-            if (k < 10) {
-                return "0" + k;
-            }
-            else {
-                return k;
-            }
-        }
-
-        currentTime(); /* calling currentTime() function to initiate the process */
-    </script>
 </head>
 
 <body>
@@ -141,6 +116,31 @@
         <div id="time">19:45:12</div>
         <div class="cb">]</div>
     </div>
+    <script>
+        function currentTime() {
+            var date = new Date(); /* creating object of Date class */
+            var hour = updateTime(date.getHours());
+            var min = updateTime(date.getMinutes());
+            var sec = updateTime(date.getSeconds());
+            var day = updateTime(date.getDay());
+            var month = updateTime(date.getMonth());
+            var year = date.getFullYear();
+            document.getElementById("time").innerText = hour + ":" + min + ":" + sec; /* adding time to the div */
+            document.getElementById("date").innerText = day + "." + month + "." + year; /* adding date to the div */
+            var t = setTimeout(function () { currentTime() }, 1000); /* setting timer */
+        }
+
+        function updateTime(k) {
+            if (k < 10) {
+                return "0" + k;
+            }
+            else {
+                return k;
+            }
+        }
+
+        currentTime(); /* calling currentTime() function to initiate the process */
+    </script>
 </body>
 
 </html>
