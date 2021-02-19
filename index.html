@@ -5,15 +5,17 @@
         html,
         body {
             height: 100%;
-            width: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column
         }
 
         .content {
+            flex: 1 0 auto;
             align-items: center;
-            display: flex;
             justify-content: center;
-            height: 100%;
-            width: 100%;
         }
 
         .fig-ansi {
@@ -21,6 +23,43 @@
             font-family: "Courier New", Monospace;
             white-space: pre;
             letter-spacing: -1px;
+            color: crimson;
+        }
+
+        #footer {
+            flex-shrink: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            align-content: stretch;
+            width: 100%;
+        }
+
+        #footer div {
+            text-align: center;
+        }
+
+        #hostname {
+            flex: 1 0 auto;
+            margin: 3px;
+        }
+        #session {
+            flex: 1 0 auto;
+            margin: 3px;
+        }
+        #windows {
+            flex: 4 0 auto;
+            margin: 3px;
+        }
+        #speed {
+            flex: 1 0 auto;
+            margin: 3px;
+        }
+        #date {
+            flex: 1 0 auto;
+            margin: 3px;
         }
     </style>
 </head>
@@ -28,11 +67,25 @@
 <body>
     <div class="content">
         <pre id="taag_output_text" style="float:left;" class="fig-ansi" contenteditable="true">
-        ▄▄▄·▄▄▄ .▄▄▄▄▄▄▄▄ .▄▄▄  ▄▄▄▄·  ▄▄▄· ▄• ▄▌• ▌ ▄ ·. ▄▄▄ .▄▄▄  ▄▄▄▄▄
-       ▐█ ▄█▀▄.▀·•██  ▀▄.▀·▀▄ █·▐█ ▀█▪▐█ ▀█ █▪██▌·██ ▐███▪▀▄.▀·▀▄ █·•██  
-        ██▀·▐▀▀▪▄ ▐█.▪▐▀▀▪▄▐▀▀▄ ▐█▀▀█▄▄█▀▀█ █▌▐█▌▐█ ▌▐▌▐█·▐▀▀▪▄▐▀▀▄  ▐█.▪
-       ▐█▪·•▐█▄▄▌ ▐█▌·▐█▄▄▌▐█•█▌██▄▪▐█▐█ ▪▐▌▐█▄█▌██ ██▌▐█▌▐█▄▄▌▐█•█▌ ▐█▌·
-       .▀    ▀▀▀  ▀▀▀  ▀▀▀ .▀  ▀·▀▀▀▀  ▀  ▀  ▀▀▀ ▀▀  █▪▀▀▀ ▀▀▀ .▀  ▀ ▀▀▀ </pre>
+
+ ██▓███  ▓█████▄▄▄█████▓▓█████  ██▀███   ▄▄▄▄    ▄▄▄       █    ██  ███▄ ▄███▓▓█████  ██▀███  ▄▄▄█████▓
+▓██░  ██▒▓█   ▀▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒▓█████▄ ▒████▄     ██  ▓██▒▓██▒▀█▀ ██▒▓█   ▀ ▓██ ▒ ██▒▓  ██▒ ▓▒
+▓██░ ██▓▒▒███  ▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒▒██▒ ▄██▒██  ▀█▄  ▓██  ▒██░▓██    ▓██░▒███   ▓██ ░▄█ ▒▒ ▓██░ ▒░
+▒██▄█▓▒ ▒▒▓█  ▄░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  ▒██░█▀  ░██▄▄▄▄██ ▓▓█  ░██░▒██    ▒██ ▒▓█  ▄ ▒██▀▀█▄  ░ ▓██▓ ░ 
+▒██▒ ░  ░░▒████▒ ▒██▒ ░ ░▒████▒░██▓ ▒██▒░▓█  ▀█▓ ▓█   ▓██▒▒▒█████▓ ▒██▒   ░██▒░▒████▒░██▓ ▒██▒  ▒██▒ ░ 
+▒▓▒░ ░  ░░░ ▒░ ░ ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░░▒▓███▀▒ ▒▒   ▓▒█░░▒▓▒ ▒ ▒ ░ ▒░   ░  ░░░ ▒░ ░░ ▒▓ ░▒▓░  ▒ ░░   
+░▒ ░      ░ ░  ░   ░     ░ ░  ░  ░▒ ░ ▒░▒░▒   ░   ▒   ▒▒ ░░░▒░ ░ ░ ░  ░      ░ ░ ░  ░  ░▒ ░ ▒░    ░    
+░░          ░    ░         ░     ░░   ░  ░    ░   ░   ▒    ░░░ ░ ░ ░      ░      ░     ░░   ░   ░      
+            ░  ░           ░  ░   ░      ░            ░  ░   ░            ░      ░  ░   ░              
+                                              ░                                                        
+        </pre>
+    </div>
+    <div id="footer">
+        [<div id="hostname">peterbaumert.github.io</div>]
+        [<div id="session">local</div>]
+        [<div id="windows">MUH KUH</div>]
+        [<div id="speed"></div>]
+        [<div id="date">01.01.2020 19:45:12</div>]
     </div>
 </body>
 
