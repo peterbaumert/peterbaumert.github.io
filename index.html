@@ -79,7 +79,28 @@
 
         #windows {
             flex: 1 0 auto;
+            display: flex;
+            justify-content: center;
         }
+
+        #windows div {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        
+        #windows .active::before {
+            content: "(";
+            color: red;
+        }
+        #windows .active::after {
+            content: ")";
+            color: red;
+        }
+        #windows .active {
+            color: darkgreen;
+            font-weight: 600;
+        }
+
     </style>
 </head>
 
@@ -107,7 +128,7 @@
         <div id="session">local</div>
         <div class="cb">]</div>
         <div class="ob">[</div>
-        <div id="windows">MUH KUH</div>
+        <div id="windows"><div class="active">0:Home</div><div>1:ioBroker</div></div>
         <div class="cb">]</div>
         <div class="ob">[</div>
         <div id="speed"></div>
