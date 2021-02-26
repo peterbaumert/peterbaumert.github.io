@@ -26,15 +26,15 @@ body {
 }
 
 table {
-  margin: 0 auto;
-  width: 70% !important;
+  width: initial !important;
 }
 
-.fig-ansi {
-  font-size: 20pt;
+#home pre {
+  font-size: 1.5vw;
   font-family: "Courier New", Monospace;
   white-space: pre;
   letter-spacing: -1px;
+  line-height: calc(1.5vw - 1px);
   color: crimson;
 }
 
