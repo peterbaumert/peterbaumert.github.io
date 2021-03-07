@@ -63,7 +63,6 @@ table {
   text-align: center;
   padding-left: var(--padding);
   padding-right: var(--padding);
-  color: lightgray;
   position: relative;
 }
 
